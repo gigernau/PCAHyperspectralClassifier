@@ -54,35 +54,35 @@ PaviaU
 ## FOR THE FIRT USE:
 
 ## 0) update everything: 
-	> sudo apt update && sudo apt upgrade
+	sudo apt update && sudo apt upgrade
 
 ## 1) install python3 : 
-	> sudo apt-get install python3.7
+	sudo apt-get install python3.7
 
 ## 2) install pip3 : 
-	> sudo apt install python3-pip  && python3 -m pip install --upgrade pip
+	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
 ## 3) install python modules : 
-	> python3 -m pip install -r requirements.txt
+	python3 -m pip install -r requirements.txt
 
 ## 4) install Pythorch:
-	> sudo apt install libopenblas-base libopenmpi-dev
+	sudo apt install libopenblas-base libopenmpi-dev
 	
 
 ## FOR C++ CUDA, CUBLAS and MATIO
 
 ## 5) install gls libraries e cblas:
-	> sudo apt-get install libgsl-dev
+	sudo apt-get install libgsl-dev
   
 ## 6) install Cuda:
 	
-	>	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
 	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
 
 ## 7) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
-	> 	sudo apt install libmatio-dev
+	sudo apt install libmatio-dev
 	git clone https://github.com/dic-iit/matio-cpp
 	cd matio-cpp
 	mkdir build && cd build
@@ -95,13 +95,13 @@ PaviaU
 # EXAMPLE OF USE
 
 ## 1) Compile and share PCA library in C++ Cuda
-	> nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
+	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
 
 ## 2) INFERCENCE
-	> python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
+	python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
 
 
 ## TO KNOW ENERGY CONSUPTION in milliWatt/sec
-	  sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
+	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/nshaud)
