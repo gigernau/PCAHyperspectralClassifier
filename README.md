@@ -8,7 +8,7 @@ Classification of Hyperspectral Image HSI with Principal Component Analysis PCA 
 This work was used [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on this paper in Geoscience and Remote Sensing Magazine :
 > N. Audebert, B. Le Saux and S. Lefevre, "*Deep Learning for Classification of Hyperspectral Data: A Comparative Review*," in IEEE Geoscience and Remote Sensing Magazine, vol. 7, no. 2, pp. 159-173, June 2019.
 
-For the PCA this work based on this PCA inplementation base on this paper :
+For the PCA this work is based on this PCA inplementation base on this paper :
 > M. Andrecut, "Parallel GPU Implementation of Iterative PCA Algorithms*," 2009, https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms. 
 
 For the use of 3D CNN this work is based on this paper :
@@ -40,41 +40,48 @@ Iterative PCA Algorithms},
      
 
 ## DATASET
-The script use this following public datasets:
-  * Pavia University
-		└── PaviaU
-    			├── PaviaU_gt.mat
-   			└── PaviaU.mat
-    
-# SETUP
+Several public hyperspectral datasets are available on the [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki. 
+
+This work use the following public datasets:
+```
+Datasets
+└── PaviaU
+    ├── PaviaU_gt.mat
+    └── PaviaU.mat
+
+# SETUP FOR LINUX OS
 ## FOR THE FIRT USE:
 
-0) update everything: sudo apt update && sudo apt upgrade
+0) update everything: 
+> sudo apt update && sudo apt upgrade
 
-1) install python3 : sudo apt-get install python3.7
+1) install python3 : 
+> sudo apt-get install python3.7
 
-2) install pip3 : sudo apt install python3-pip  && python3 -m pip install --upgrade pip
+2) install pip3 : 
+> sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-3) install python modules : python3 -m pip install -r requirements.txt
+3) install python modules : 
+> python3 -m pip install -r requirements.txt
 
 4) install Pythorch:
-	sudo apt install libopenblas-base libopenmpi-dev
+	> sudo apt install libopenblas-base libopenmpi-dev
 	
 
 ##FOR C++ CUDA, CUBLAS and MATIO
 
 4) install gls libraries e cblas:
-	sudo apt-get install libgsl-dev
+	> sudo apt-get install libgsl-dev
   
 5)install Cuda:
 	
-	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+>	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
 	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
 
 6) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
-	sudo apt install libmatio-dev
+> 	sudo apt install libmatio-dev
 	git clone https://github.com/dic-iit/matio-cpp
 	cd matio-cpp
 	mkdir build && cd build
