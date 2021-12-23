@@ -10,7 +10,7 @@ This part of work contains only inferece part (whithout train/test model script)
 This work was used [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on this paper in Geoscience and Remote Sensing Magazine :
 > N. Audebert, B. Le Saux and S. Lefevre, "*Deep Learning for Classification of Hyperspectral Data: A Comparative Review*," in IEEE Geoscience and Remote Sensing Magazine, vol. 7, no. 2, pp. 159-173, June 2019.
 
-For the PCA this work is based on this PCA inplementation base on this paper :
+For the PCA this work is based on this inplementation of this paper :
 > M. Andrecut, "Parallel GPU Implementation of Iterative PCA Algorithms*," 2009, https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms. 
 
 For the use of 3D CNN this work is based on this paper :
