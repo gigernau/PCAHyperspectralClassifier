@@ -1,6 +1,8 @@
 # Classification-of-Hyperspectral-Image-HSI-with-Principal-Component-Analysis-PCA-in-CUDA-cuBLAS-
 
-Classification of Hyperspectral Image HSI with Principal Component Analysis PCA in CUDA ( cuBLAS ) Master Degree Thesis in Computer Science
+Classification of Hyperspectral Image HSI with Principal Component Analysis PCA in CUDA ( cuBLAS ) Master Degree Thesis in Computer Science.
+
+This part of work contains only inferece part (whithout train/test model script).
 
 
 ## Reference
@@ -32,7 +34,7 @@ month={June},}
 
 > @misc{pca, 
     author={M. Andrecut},
-    title= {Parallel GPU Implementation of
+    title= {Parallel GPU Implementation ofIt is based on the PyTorch deep learning and GPU computing framework
 Iterative PCA Algorithms}, 
     journal={Research Gate},
     year={2009},
