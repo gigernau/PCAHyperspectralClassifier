@@ -40,14 +40,14 @@ Iterative PCA Algorithms},
      
 
 ## DATASET
-Several public hyperspectral datasets are available on the [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki. 
-
+Several public hyperspectral datasets are available on the [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
 This work use the following public datasets:
 ```
 Datasets
 └── PaviaU
     ├── PaviaU_gt.mat
     └── PaviaU.mat
+```
 
 # SETUP FOR LINUX OS
 ## FOR THE FIRT USE:
