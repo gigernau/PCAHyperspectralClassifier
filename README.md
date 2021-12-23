@@ -92,12 +92,12 @@ PaviaU
 
 
 
-# EXAMPLE OF USE
+# EXAMPLE OF USEhttps://github.com/gigernau/Classification-of-Hyperspectral-Image-HSI-with-Principal-Component-Analysis-PCA-in-CUDA-cuBLAS-
 
-1) Compile and share PCA library in C++ Cuda
+### 1) Compile and share PCA library in C++ Cuda
 	> nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
 
-2) INFERCENCE
+### 2) INFERCENCE
 	> python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
 
 
