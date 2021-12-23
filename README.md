@@ -85,7 +85,7 @@ PaviaU
 ## 6) install Cublas:
 	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
 
-## 7) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
+## 7) install [Matio-Cpp](https://github.com/ami-iit/matio-cpp):
 	sudo apt install libmatio-dev
 	git clone https://github.com/dic-iit/matio-cpp
 	cd matio-cpp
