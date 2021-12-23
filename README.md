@@ -11,6 +11,9 @@ This work was used [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox ba
 For the PCA this work based on this PCA inplementation base on this paper :
 > M. Andrecut, "Parallel GPU Implementation of Iterative PCA Algorithms*," 2009, https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms. 
 
+For the use of 3D CNN this work is based on this paper :
+>   * 3D CNN ([Spectral–Spatial Classification of Hyperspectral Imagery with 3D Convolutional Neural Network, Li et al., Remote Sensing 2017](http://www.mdpi.com/2072-4292/9/1/67))
+
 
 
 Bibtex format :
@@ -35,8 +38,15 @@ Iterative PCA Algorithms},
     year={2009},
      note ={\url{https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms}}}
      
-     
-### SETUP
+
+## DATASET
+The script use this following public datasets:
+  * Pavia University
+		└── PaviaU
+    			├── PaviaU_gt.mat
+   			└── PaviaU.mat
+    
+# SETUP
 ## FOR THE FIRT USE:
 
 0) update everything: sudo apt update && sudo apt upgrade
@@ -73,14 +83,17 @@ Iterative PCA Algorithms},
 	[sudo] make install
 
 
-### EXAMPLE OF USE
 
-# 1) Compile and share PCA library in C++ Cuda
-nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
+# EXAMPLE OF USE
 
-# 4) INFERCENCE
-python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
+1) Compile and share PCA library in C++ Cuda
+> nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
+
+2) INFERCENCE
+> python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
 
 
 ##TO KNOW ENERGY CONSUPTION in milliWatt/sec
-	 sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
+	 > sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
+
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/nshaud)
