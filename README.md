@@ -62,24 +62,28 @@ PaviaU
 ## 2) install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-## 3) install python modules : 
-	python3 -m pip install -r requirements.txt
-
-## 4) install Pythorch:
-	sudo apt install libopenblas-base libopenmpi-dev
+## 3) install [CUDA] (https://developer.nvidia.com/cuda-toolkit):
 	
+	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+	sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+	sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+	sudo apt-get update
+	sudo apt-get -y install cuda
 
-## FOR C++ CUDA, CUBLAS and MATIO
-
-## 5) install gls libraries e cblas:
-	sudo apt-get install libgsl-dev
-  
-## 6) install Cuda:
-	
 	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
 	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
+	
+## 4) install python modules : 
+	python3 -m pip install -r requirements.txt
+
+## 5) install gls libraries:
+	sudo apt-get install libgsl-dev
+  
+## 6) install Cublas:
+	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
 
 ## 7) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
 	sudo apt install libmatio-dev
