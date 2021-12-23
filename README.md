@@ -53,36 +53,36 @@ PaviaU
 # SETUP FOR LINUX OS
 ## FOR THE FIRT USE:
 
-0) update everything: 
-> sudo apt update && sudo apt upgrade
+## 0) update everything: 
+	> sudo apt update && sudo apt upgrade
 
-1) install python3 : 
-> sudo apt-get install python3.7
+## 1) install python3 : 
+	> sudo apt-get install python3.7
 
-2) install pip3 : 
-> sudo apt install python3-pip  && python3 -m pip install --upgrade pip
+## 2) install pip3 : 
+	> sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-3) install python modules : 
-> python3 -m pip install -r requirements.txt
+## 3) install python modules : 
+	> python3 -m pip install -r requirements.txt
 
-4) install Pythorch:
+## 4) install Pythorch:
 	> sudo apt install libopenblas-base libopenmpi-dev
 	
 
-### FOR C++ CUDA, CUBLAS and MATIO
+## FOR C++ CUDA, CUBLAS and MATIO
 
-5) install gls libraries e cblas:
+## 5) install gls libraries e cblas:
 	> sudo apt-get install libgsl-dev
   
-6) install Cuda:
+## 6) install Cuda:
 	
->	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+	>	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
 	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
 
-7) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
-> 	sudo apt install libmatio-dev
+## 7) install matio-cpp  (https://github.com/ami-iit/matio-cpp):
+	> 	sudo apt install libmatio-dev
 	git clone https://github.com/dic-iit/matio-cpp
 	cd matio-cpp
 	mkdir build && cd build
@@ -92,12 +92,12 @@ PaviaU
 
 
 
-# EXAMPLE OF USEhttps://github.com/gigernau/Classification-of-Hyperspectral-Image-HSI-with-Principal-Component-Analysis-PCA-in-CUDA-cuBLAS-
+# EXAMPLE OF USE
 
-### 1) Compile and share PCA library in C++ Cuda
+## 1) Compile and share PCA library in C++ Cuda
 	> nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
 
-### 2) INFERCENCE
+## 2) INFERCENCE
 	> python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
 
 
