@@ -62,7 +62,7 @@ PaviaU
 ## 2) install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-## 3) install [CUDA] (https://developer.nvidia.com/cuda-toolkit):
+## 3) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
 	
 	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
