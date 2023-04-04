@@ -1,9 +1,7 @@
 # PCAHyperClassificator
 
 
-Classification of Hyperspectral Image HSI with Principal Component Analysis PCA in CUDA ( cuBLAS ) Master Degree Thesis in Computer Science.
-
-This part of work contains only inferece part (whithout train/test model script).
+Classification of Hyperspectral Image HSI with Principal Component Analysis PCA in CUDA ( cuBLAS ).
 
 
 ## Reference
@@ -107,6 +105,8 @@ Salinas
 
 ## Energy consumptions in milliWatt/sec
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
+
+
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/gianluca.delucia)
 
