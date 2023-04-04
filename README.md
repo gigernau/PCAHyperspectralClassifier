@@ -68,7 +68,8 @@ Salinas
 ## 2) install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-## 3) Install python modules : python3 -m pip install -r requirements.txt
+## 3) Install python modules : 
+	python3 -m pip install -r requirements.txt
 
 ## 4) Install gls e cblas:
 	sudo apt install libopenblas-base libopenmpi-dev
