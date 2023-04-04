@@ -109,4 +109,5 @@ PaviaU
 ## TO KNOW ENERGY CONSUPTION in milliWatt/sec
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
 
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/nshaud)
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/gianluca.delucia)
+
