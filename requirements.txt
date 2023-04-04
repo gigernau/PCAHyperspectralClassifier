@@ -1,0 +1,15 @@
+Cython
+numpy>=1.19.4
+spectral==0.19
+scipy>=0.19.0
+tqdm>=4.15.0
+visdom>=0.1.5
+seaborn>=0.8
+scikit-learn>=0.19.0
+scikit-image>=0.13.1
+torch
+matplotlib>=2.0.2
+torchsummary>=1.5
+joblib==0.14.1
+plotly
+chart_studio
