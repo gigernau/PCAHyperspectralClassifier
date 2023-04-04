@@ -39,6 +39,20 @@ Iterative PCA Algorithms},
     year={2009},
      note ={\url{https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms}}}
      
+> @Article{rs9010067,
+AUTHOR = {Li, Ying and Zhang, Haokui and Shen, Qiang},
+TITLE = {Spectral–Spatial Classification of Hyperspectral Imagery with 3D Convolutional Neural Network},
+JOURNAL = {Remote Sensing},
+VOLUME = {9},
+YEAR = {2017},
+NUMBER = {1},
+ARTICLE-NUMBER = {67},
+URL = {https://www.mdpi.com/2072-4292/9/1/67},
+ISSN = {2072-4292},
+DOI = {10.3390/rs9010067}
+}
+
+     
 
 ## DATASET
 Several public hyperspectral datasets are available on the [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
