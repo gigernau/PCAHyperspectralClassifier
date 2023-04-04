@@ -62,16 +62,16 @@ Salinas
 # SETUP FOR LINUX OS
 ## FOR THE FIRT USE:
 
-## 1) update everything: 
+## 1) Update : 
 	sudo apt update && sudo apt upgrade
 
-## 2) install pip3 : 
+## 2) Install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
 ## 3) Install python modules : 
 	python3 -m pip install -r requirements.txt
 	
-## 4) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
+## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit):
 	
 	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -85,7 +85,7 @@ Salinas
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
 
-## 5) install gls and Cublas libraries:
+## 5) Install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
 	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
   
@@ -95,17 +95,17 @@ Salinas
 ## 1) Set VISDOM enviroment in another shell for view image and data plot on browser
 	python3 -m visdom.server
 
-## 2) TRAIN MODEL
+## 2) Train Model
 	python3 main.py --model li --dataset PaviaU --training_sample 0.7  --epoch 50 --cuda 0 --pca 10
 
 ## 3) Compile PCA in C++ with Cuda
 	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
 	
-## 4) INFERCENCE
+## 4) Inference
 	python3 inference.py --cuda 0 --image PaviaU --checkpoint models/pu/5_PU.pth --model li --pca 5
 
 
-## TO KNOW ENERGY CONSUPTION in milliWatt/sec
+## Energy consumptions in milliWatt/sec
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/gianluca.delucia)
