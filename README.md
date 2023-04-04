@@ -70,12 +70,8 @@ Salinas
 
 ## 3) Install python modules : 
 	python3 -m pip install -r requirements.txt
-
-## 4) Install gls e cblas:
-	sudo apt install libopenblas-base libopenmpi-dev
-	sudo apt-get install libgsl-dev
 	
-## 5) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
+## 4) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
 	
 	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -89,14 +85,11 @@ Salinas
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
 
-## 6) install gls libraries:
+## 5) install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
-  
-## 7) install Cublas:
 	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
-
-
-
+  
+  
 # EXAMPLE
 
 ## 1) Set VISDOM enviroment in another shell for view image and data plot on browser
