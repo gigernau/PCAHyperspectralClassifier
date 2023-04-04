@@ -54,16 +54,22 @@ PaviaU
 # SETUP FOR LINUX OS
 ## FOR THE FIRT USE:
 
-## 0) update everything: 
+## 1) update everything: 
 	sudo apt update && sudo apt upgrade
-
-## 1) install python3 : 
-	sudo apt-get install python3.7
 
 ## 2) install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-## 3) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
+## 3) Install python modules : python3 -m pip install -r requirements.txt
+	
+
+### Install C++ CUDA e CUBLAS e MATIO
+
+## 4) Install gls e cblas:
+	sudo apt install libopenblas-base libopenmpi-dev
+	sudo apt-get install libgsl-dev
+	
+## 5) install [CUDA](https://developer.nvidia.com/cuda-toolkit):
 	
 	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -76,34 +82,28 @@ PaviaU
 	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 	source ~/.bashrc
-	
-## 4) install python modules : 
-	python3 -m pip install -r requirements.txt
 
-## 5) install gls libraries:
+## 6) install gls libraries:
 	sudo apt-get install libgsl-dev
   
-## 6) install Cublas:
+## 7) install Cublas:
 	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
 
-## 7) install [Matio-Cpp](https://github.com/ami-iit/matio-cpp):
-	sudo apt install libmatio-dev
-	git clone https://github.com/dic-iit/matio-cpp
-	cd matio-cpp
-	mkdir build && cd build
-	cmake ../
-	make
-	[sudo] make install
 
 
+# EXAMPLE
 
-# EXAMPLE OF USE
+## 1) Set VISDOM enviroment in another shell for view image and data plot on browser
+	python3 -m visdom.server
 
-## 1) Compile and share PCA library in C++ Cuda
-	nvcc -Xcompiler -fPIC -shared -o pca.so mainTT.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas -lmatioCpp
+## 2) TRAIN MODEL
+	python3 main.py --model li --dataset PaviaU --training_sample 0.7  --epoch 50 --cuda 0 --pca 10
 
-## 2) INFERCENCE
-	python3 inference.py --pca 10 --image PaviaU --cuda 0 --checkpoint model.pth
+## 3) Compile PCA in C++ with Cuda
+	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
+	
+## 4) INFERCENCE
+	python3 inference.py --cuda 0 --image PaviaU --checkpoint models/pu/5_PU.pth --model li --pca 5
 
 
 ## TO KNOW ENERGY CONSUPTION in milliWatt/sec
