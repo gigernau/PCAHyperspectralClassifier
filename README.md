@@ -49,6 +49,14 @@ This work use the following public datasets:
 PaviaU
     ├── PaviaU_gt.mat
     └── PaviaU.mat
+    
+IndianPines
+    ├── IndianPines_gt.mat
+    └── IndianPines.mat
+    
+Salinas
+    ├── Salinas_gt.mat
+    └── Salinas.mat
 ```
 
 # SETUP FOR LINUX OS
@@ -61,9 +69,6 @@ PaviaU
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
 ## 3) Install python modules : python3 -m pip install -r requirements.txt
-	
-
-### Install C++ CUDA e CUBLAS e MATIO
 
 ## 4) Install gls e cblas:
 	sudo apt install libopenblas-base libopenmpi-dev
