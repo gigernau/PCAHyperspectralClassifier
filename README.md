@@ -1,18 +1,18 @@
 # PCAHyperClassificator
 
 
-Classification of Hyperspectral Image HSI with Principal Component Analysis PCA in CUDA ( cuBLAS ).
+Classification of Hyperspectral Images ( HSIs ) with Principal Component Analysis ( PCA ) in CUDA ( cuBLAS ).
 
 
-## Reference
+## References
 
 This work uses [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on this paper in Geoscience and Remote Sensing Magazine :
 > N. Audebert, B. Le Saux and S. Lefevre, "*Deep Learning for Classification of Hyperspectral Data: A Comparative Review*," in IEEE Geoscience and Remote Sensing Magazine, vol. 7, no. 2, pp. 159-173, June 2019.
 
-For the PCA this work is based on this inplementation of this paper :
+For the PCA, this work implements the algorithm of this paper :
 > M. Andrecut, "Parallel GPU Implementation of Iterative PCA Algorithms*," 2009, https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms. 
 
-For the use of 3D CNN this work is based on this paper :
+As 3D CNN, this work uses the model described in this paper :
 >   * 3D CNN ([Spectral–Spatial Classification of Hyperspectral Imagery with 3D Convolutional Neural Network, Li et al., Remote Sensing 2017](http://www.mdpi.com/2072-4292/9/1/67))
 
 
@@ -55,8 +55,8 @@ DOI = {10.3390/rs9010067}
      
 
 ## DATASET
-Several public hyperspectral datasets are available on the [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
-This work use the following public datasets:
+Several public hyperspectral datasets are available at [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
+This work uses the following public datasets:
 ```
 PaviaU
     ├── PaviaU_gt.mat
@@ -110,15 +110,15 @@ Salinas
 ## 2) Compile PCA in C++ with Cuda
 	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
 	
-## 3) Train Model
+## 3) Train the Model
 	python3 main.py --model li --dataset PaviaU --training_sample 0.7  --epoch 50 --cuda 0 --pca 10
 	
 ## 4) Inference
 	python3 inference.py --cuda 0 --image PaviaU --checkpoint models/pu/5_PU.pth --model li --pca 5
 
 
-## Energy consumptions in milliWatt/sec
-	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumiPCA.txt"
+## Energy consumptions in milliWatt/sec on Jetson Nano
+	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumpPCA.txt"
 
 
 
