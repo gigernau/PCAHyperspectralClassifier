@@ -1,17 +1,19 @@
 # PCAHyperspectralClassifier
 
 Classification of Hyperspectral Images ( HSIs ) with Principal Component Analysis ( PCA ) preprocessing exploiting CUDA ( cuBLAS ).
-The code, explicitly designed for the NVIDIA Jetson Nano Developer kit, can run on any PC provided with NVIDIA GPU, Python3, and the necessary modules.
+The code, explicitly designed for the NVIDIA Jetson Nano Developer kit, can run on any PC with NVIDIA GPU, Python3, and the necessary modules.
 
 
 
 ## References
 
-This work uses [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on this paper in Geoscience and Remote Sensing Magazine :
+This work uses [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on the following paper in Geoscience and Remote Sensing Magazine :
 > N. Audebert, B. Le Saux and S. Lefevre, "*Deep Learning for Classification of Hyperspectral Data: A Comparative Review*," in IEEE Geoscience and Remote Sensing Magazine, vol. 7, no. 2, pp. 159-173, June 2019.
 
-For the PCA, this work implements the algorithm of this paper :
+For the PCA, this work uses the algorithm of this paper :
 > M. Andrecut, "Parallel GPU Implementation of Iterative PCA Algorithms*," 2009, https://www.researchgate.net/publication/26829736_Parallel_GPU_Implementation_of_Iterative_PCA_Algorithms. 
+
+as implemented on https://github.com/nmerrill67/GPU_GSPCA
 
 As 3D CNN, this work uses the model described in this paper :
 >   * 3D CNN ([Spectral–Spatial Classification of Hyperspectral Imagery with 3D Convolutional Neural Network, Li et al., Remote Sensing 2017](http://www.mdpi.com/2072-4292/9/1/67))
