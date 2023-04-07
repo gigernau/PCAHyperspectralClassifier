@@ -1,6 +1,11 @@
-#include "kernel_pca.h"
-// includes, GSL & CBLAS
+/***
 
+This software preprocess data using Principal Component Analysis ( PCA ) exploiting CUDA.
+Developed by Gianluca De Lucia ( gianluca.delucia.94@gmail.com ) and Diego Romano ( diego.romano@cnr.it )
+
+***/
+
+#include "kernel_pca.h"
 #include <string>
 #include <iostream>
 #include <iomanip>
