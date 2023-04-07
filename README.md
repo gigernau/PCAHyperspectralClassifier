@@ -102,7 +102,7 @@ Salinas
 	python3 -m visdom.server
 	
 ## 2) Train the Model
-	python3 main.py --model li --dataset IndianPines --training_sample 0.7  --epoch 100 --cuda 0 --pca 10
+	python3 main.py --model li --dataset IndianPines --training_sample 0.7  --epoch 200 --cuda 0 --pca 10
 	
 ## 3) Inference
 	python3 inference.py --cuda 0 --image IndianPines --checkpoint models/ip/10_IP.pth --model li --pca 10
