@@ -1,7 +1,8 @@
-# PCAHyperClassificator
+# PCAHyperClassifier
 
 
-Classification of Hyperspectral Images ( HSIs ) with Principal Component Analysis ( PCA ) in CUDA ( cuBLAS ).
+Classification of Hyperspectral Images ( HSIs ) with preprocessing using Principal Component Analysis ( PCA ) on CUDA ( cuBLAS ).
+
 
 
 ## References
