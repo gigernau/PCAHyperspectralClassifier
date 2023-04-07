@@ -108,7 +108,7 @@ Salinas
 	python3 inference.py --cuda 0 --image IndianPines --checkpoint models/ip/5_IP.pth --model li --pca 10
 
 
-## To measure Energy consumptions in milliWatt/sec on Jetson Nano, run on a separate terminal
+## To sample milliWatts absorbed every second on Jetson Nano, run on a separate terminal
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumpPCA.txt"
 
 
