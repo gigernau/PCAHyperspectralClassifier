@@ -64,11 +64,11 @@ PaviaU
     
 IndianPines
     ├── IndianPines_gt.mat
-    └── IndianPines.mat
+    └── IndianPines_corrected.mat
     
 Salinas
     ├── Salinas_gt.mat
-    └── Salinas.mat
+    └── Salinas_corrected.mat
 ```
 
 # SETUP FOR LINUX OS
@@ -77,10 +77,10 @@ Salinas
 ## 1) Update : 
 	sudo apt update && sudo apt upgrade
 
-## 2) Install pip3 : 
+## 2) Use Python3 and install pip3 : 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
-## 3) Install python modules : 
+## 3) Install Python3 modules : 
 	python3 -m pip install -r requirements.txt
 	
 ## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
