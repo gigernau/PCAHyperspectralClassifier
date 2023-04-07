@@ -78,7 +78,7 @@ Salinas
 ## 1) Update : 
 	sudo apt update && sudo apt upgrade
 
-## 2) Use Python3 and install pip3 : 
+## 2) Install pip3 for Python3: 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
 
 ## 3) Install Python3 modules : 
@@ -86,13 +86,13 @@ Salinas
 	
 ## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
-## 4bis) Install Cupy module ( check your CUDA version i.e. 12.1)
+## 5) Install Cupy module ( e.g. for CUDA 12.1 )
 	python3 -m pip install cupy-cuda12x
 
-## 5) Install gls and Cublas libraries:
+## 6) Install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
   
-## 6) Compile PCA in C++ with Cuda
+## 7) Compile PCA with CUDA compiler
 	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
 	
 # EXAMPLE
