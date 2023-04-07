@@ -90,7 +90,7 @@ Salinas
 ## 5) Install CuPy module ( e.g., for CUDA 12.1 )
 	python3 -m pip install cupy-cuda12x
 
-## 6) Install gls library:
+## 6) Install gsl library:
 	sudo apt-get install libgsl-dev
   
 ## 7) Compile PCA with CUDA compiler
