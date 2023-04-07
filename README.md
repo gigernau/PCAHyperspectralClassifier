@@ -1,7 +1,7 @@
 # PCAHyperspectralClassifier
 
-
-Classification of Hyperspectral Images ( HSIs ) with preprocessing using Principal Component Analysis ( PCA ) on CUDA ( cuBLAS ).
+Classification of Hyperspectral Images ( HSIs ) with Principal Component Analysis ( PCA ) preprocessing exploiting CUDA ( cuBLAS ).
+The code, explicitly designed for the NVIDIA Jetson Nano Developer kit, can run on any PC provided with NVIDIA GPU, Python3, and the necessary modules.
 
 
 
