@@ -1,4 +1,10 @@
-# Python 2/3 compatiblity
+"""
+
+This version uses PCA preprocessing developed by Gianluca De Lucia ( gianluca.delucia.94@gmail.com ) and Diego Romano ( diego.romano@cnr.it )
+based on original code from DeepHyperX.
+
+"""
+
 from __future__ import print_function
 from __future__ import division
 import joblib
