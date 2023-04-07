@@ -7,7 +7,7 @@ The code, explicitly designed for the NVIDIA Jetson Nano Developer kit, can run 
 
 ## References
 
-This work uses [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on the following paper in Geoscience and Remote Sensing Magazine :
+This work uses the [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on the following paper in Geoscience and Remote Sensing Magazine :
 > N. Audebert, B. Le Saux and S. Lefevre, "*Deep Learning for Classification of Hyperspectral Data: A Comparative Review*," in IEEE Geoscience and Remote Sensing Magazine, vol. 7, no. 2, pp. 159-173, June 2019.
 
 For the PCA, this work uses the algorithm of this paper :
@@ -58,8 +58,8 @@ DOI = {10.3390/rs9010067}
      
 
 ## DATASET
-Several public hyperspectral datasets are available at [UPV/EHU](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
-This work uses the following public datasets:
+Several public hyperspectral datasets are available at [UPV/EHU](https://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
+For the testing of this code we used the following public datasets:
 ```
 PaviaU
     ├── PaviaU_gt.mat
@@ -74,8 +74,7 @@ Salinas
     └── Salinas_corrected.mat
 ```
 
-# SETUP FOR LINUX OS
-## FOR THE FIRT USE:
+# SETUP FOR UBUNTU LINUX OS
 
 ## 1) Update : 
 	sudo apt update && sudo apt upgrade
@@ -88,18 +87,18 @@ Salinas
 	
 ## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
-## 5) Install Cupy module ( e.g. for CUDA 12.1 )
+## 5) Install CuPy module ( e.g. for CUDA 12.1 )
 	python3 -m pip install cupy-cuda12x
 
-## 6) Install gls and Cublas libraries:
+## 6) Install gls and cuBLAS libraries:
 	sudo apt-get install libgsl-dev
   
 ## 7) Compile PCA with CUDA compiler
 	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
 	
-# EXAMPLE
+# USAGE EXAMPLE
 
-## 1) Set VISDOM enviroment in another shell for view image and data plot on browser
+## 1) Set VISDOM enviroment in another shell to view images and data plot on the browser
 	python3 -m visdom.server
 	
 ## 2) Train the Model
@@ -109,7 +108,7 @@ Salinas
 	python3 inference.py --cuda 0 --image IndianPines --checkpoint models/ip/5_IP.pth --model li --pca 5
 
 
-## Energy consumptions in milliWatt/sec on Jetson Nano
+## To measure Energy consumptions in milliWatt/sec on [Jetson Nano], run on a separate terminal
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumpPCA.txt"
 
 
