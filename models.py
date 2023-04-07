@@ -1,3 +1,10 @@
+""" 
+
+Original code from DeepHyperX
+modified by Gianluca De Lucia.
+
+"""
+
 # -*- coding: utf-8 -*-
 # Torch
 import torch.nn as nn
@@ -205,58 +212,6 @@ def get_model(name, **kwargs):
     return model, optimizer, criterion, kwargs
 
 
-# def get_model(name, **kwargs):
-#     """
-#     Instantiate and obtain a model with adequate hyperparameters
-
-#     Args:
-#         name: string of the model name
-#         kwargs: hyperparameters
-#     Returns:
-#         model: PyTorch network
-#         optimizer: PyTorch optimizer
-#         criterion: PyTorch loss Function
-#         kwargs: hyperparameters with sane defaults
-#     """
-#     device = kwargs.setdefault("device", torch.device("cpu"))
-#     n_classes = kwargs["n_classes"]
-#     n_bands = kwargs["n_bands"]
-#     weights = torch.ones(n_classes)
-#     weights[torch.LongTensor(kwargs["ignored_labels"])] = 0.0
-#     weights = weights.to(device)
-#     weights = kwargs.setdefault("weights", weights)
-#     pcaNum = kwargs["pca"]
-
-    
-
-#     patch_size = kwargs.setdefault("patch_size", 5)
-#     center_pixel = True
-#     model = LiEtAl(n_bands, n_classes, n_planes=16, patch_size=patch_size, pca=pcaNum)
-#     lr = kwargs.setdefault("learning_rate", 0.01)
-#     optimizer = optim.SGD(
-#         model.parameters(), lr=lr, momentum=0.9, weight_decay=0.0005
-#     )
-#     epoch = kwargs.setdefault("epoch", 200)
-#     criterion = nn.CrossEntropyLoss(weight=kwargs["weights"])
-#     # kwargs.setdefault('scheduler', optim.lr_scheduler.MultiStepLR(optimizer, milestones=[epoch // 2, (5 * epoch) // 6], gamma=0.1))
-    
-
-#     model = model.to(device)
-#     epoch = kwargs.setdefault("epoch", 100)
-#     kwargs.setdefault(
-#         "scheduler",
-#         optim.lr_scheduler.ReduceLROnPlateau(
-#             optimizer, factor=0.1, patience=epoch // 4, verbose=True
-#         ),
-#     )
-#     # kwargs.setdefault('scheduler', None)
-#     kwargs.setdefault("batch_size", 100)
-#     kwargs.setdefault("supervision", "full")
-#     kwargs.setdefault("flip_augmentation", False)
-#     kwargs.setdefault("radiation_augmentation", False)
-#     kwargs.setdefault("mixture_augmentation", False)
-#     kwargs["center_pixel"] = center_pixel
-#     return model, optimizer, criterion, kwargs
 
 
 class Baseline(nn.Module):
