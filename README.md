@@ -83,19 +83,7 @@ Salinas
 ## 3) Install python modules : 
 	python3 -m pip install -r requirements.txt
 	
-## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit):
-	
-	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-	sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-	sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
-	sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-	sudo apt-get update
-	sudo apt-get -y install cuda
-
-	echo "# Add CUDA bin & library paths:" >> ~/.bashrc
-	echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
-	echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
-	source ~/.bashrc
+## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
 ## 5) Install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
