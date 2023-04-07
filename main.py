@@ -4,11 +4,13 @@
 """
 DEEP LEARNING FOR HYPERSPECTRAL DATA.
 
-This script allows the user to run several deep models (and SVM baselines)
+This version uses PCA preprocessing developed by Gianluca De Lucia ( gianluca.delucia.94@gmail.com )
+based on original code from DeepHyperX.
+
+This script allows the user to run several deep models
 against various hyperspectral datasets. It is designed to quickly benchmark
 state-of-the-art CNNs on various public hyperspectral datasets.
-
-This code is released under the GPLv2 license for non-commercial and research
+This code is released under the GPLv3 license for non-commercial and research
 purposes only.
 For commercial use, please contact the authors.
 """
