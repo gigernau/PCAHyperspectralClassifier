@@ -87,21 +87,19 @@ Salinas
 
 ## 5) Install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
-	sudo apt install libcublas9.1 libopenblas-base libopenmpi-dev
   
-  
+## 6) Compile PCA in C++ with Cuda
+	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
+	
 # EXAMPLE
 
 ## 1) Set VISDOM enviroment in another shell for view image and data plot on browser
 	python3 -m visdom.server
 	
-## 2) Compile PCA in C++ with Cuda
-	nvcc -Xcompiler -fPIC -shared -o pca.so main.cpp kernel_pca.cu -lcublas -lm -lgsl -lgslcblas
-	
-## 3) Train the Model
+## 2) Train the Model
 	python3 main.py --model li --dataset PaviaU --training_sample 0.7  --epoch 50 --cuda 0 --pca 10
 	
-## 4) Inference
+## 3) Inference
 	python3 inference.py --cuda 0 --image PaviaU --checkpoint models/pu/5_PU.pth --model li --pca 5
 
 
