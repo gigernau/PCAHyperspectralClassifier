@@ -97,10 +97,10 @@ Salinas
 	python3 -m visdom.server
 	
 ## 2) Train the Model
-	python3 main.py --model li --dataset PaviaU --training_sample 0.7  --epoch 50 --cuda 0 --pca 10
+	python3 main.py --model li --dataset IndianPines --training_sample 0.7  --epoch 100 --cuda 0 --pca 10
 	
 ## 3) Inference
-	python3 inference.py --cuda 0 --image PaviaU --checkpoint models/pu/5_PU.pth --model li --pca 5
+	python3 inference.py --cuda 0 --image IndianPines --checkpoint models/ip/5_IP.pth --model li --pca 5
 
 
 ## Energy consumptions in milliWatt/sec on Jetson Nano
