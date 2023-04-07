@@ -1,8 +1,11 @@
+/***
+This software preprocess data using Principal Component Analysis ( PCA ) exploiting CUDA.
+Modified by Gianluca De Lucia ( gianluca.delucia.94@gmail.com ) and Diego Romano ( diego.romano@cnr.it )
+based on GPU_GSPCA code by Nathaniel Merrill.
+***/
+
 #include "kernel_pca.h"
 #include <iostream>
-
-
-
 
 
 KernelPCA::KernelPCA() : K(-1)
