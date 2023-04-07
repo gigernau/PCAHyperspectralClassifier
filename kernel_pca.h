@@ -2,6 +2,8 @@
 // implementation of PCA-GS algorithm
 //
 // M. Andrecut (c) 2008
+// modified by Gianluca De Lucia.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
