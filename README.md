@@ -59,7 +59,7 @@ DOI = {10.3390/rs9010067}
 
 ## DATASET
 Several public hyperspectral datasets are available at [UPV/EHU](https://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes) wiki.
-For the testing of this code we used the following public datasets:
+For the testing of this code, we used the following public datasets:
 ```
 PaviaU
     ├── PaviaU_gt.mat
@@ -87,7 +87,7 @@ Salinas
 	
 ## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
-## 5) Install CuPy module ( e.g. for CUDA 12.1 )
+## 5) Install CuPy module ( e.g., for CUDA 12.1 )
 	python3 -m pip install cupy-cuda12x
 
 ## 6) Install gls and cuBLAS libraries:
@@ -98,7 +98,7 @@ Salinas
 	
 # USAGE EXAMPLE
 
-## 1) Set VISDOM enviroment in another shell to view images and data plot on the browser
+## 1) Set VISDOM environment in another shell to view images and plots in a browser
 	python3 -m visdom.server
 	
 ## 2) Train the Model
@@ -108,7 +108,7 @@ Salinas
 	python3 inference.py --cuda 0 --image IndianPines --checkpoint models/ip/5_IP.pth --model li --pca 5
 
 
-## To measure Energy consumptions in milliWatt/sec on [Jetson Nano], run on a separate terminal
+## To measure Energy consumptions in milliWatt/sec on Jetson Nano, run on a separate terminal
 	sudo watch -t -n 1 "(cat /sys/bus/i2c/drivers/ina3221x/6-0040/iio:device0/in_power1_input) | tee -a consumpPCA.txt"
 
 
