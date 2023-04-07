@@ -1,3 +1,9 @@
+
+""" 
+Original code from DeepHyperX
+modified by Gianluca De Lucia.
+"""
+
 # -*- coding: utf-8 -*-
 import random
 import numpy as np
