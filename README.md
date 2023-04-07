@@ -86,6 +86,9 @@ Salinas
 	
 ## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
 
+## 4bis) Install Cupy module ( check your CUDA version i.e. 12.1)
+	python3 -m pip install cupy-cuda12x
+
 ## 5) Install gls and Cublas libraries:
 	sudo apt-get install libgsl-dev
   
