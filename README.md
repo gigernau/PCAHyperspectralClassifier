@@ -98,7 +98,7 @@ Salinas
 	
 # USAGE EXAMPLE
 
-## 1) Set VISDOM environment in another shell to view images and plots in a browser
+## 1) Set VISDOM environment in a separate shell to view images and plots in a browser
 	python3 -m visdom.server
 	
 ## 2) Train the Model
