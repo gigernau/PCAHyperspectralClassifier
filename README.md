@@ -77,7 +77,7 @@ Salinas
 # SETUP FOR UBUNTU LINUX OS
 
 ## 1) Update : 
-	sudo apt update && sudo apt upgrade
+	sudo apt update
 
 ## 2) Install pip3 for Python3: 
 	sudo apt install python3-pip  && python3 -m pip install --upgrade pip
