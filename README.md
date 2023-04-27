@@ -85,7 +85,8 @@ Salinas
 ## 3) Install Python3 modules : 
 	python3 -m pip install -r requirements.txt
 	
-## 4) Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
+## 4) Check Cuda version or Install [CUDA](https://developer.nvidia.com/cuda-toolkit)
+	nvcc -V
 
 ## 5) Install CuPy module ( e.g., for CUDA 12.1 )
 	python3 -m pip install cupy-cuda12x
