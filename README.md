@@ -5,6 +5,8 @@ Classification of Hyperspectral Images ( HSIs ) with Principal Component Analysi
 The code, explicitly designed for the NVIDIA Jetson Nano Developer kit, can run on any PC with NVIDIA GPU, Python3, and the necessary modules.
 <br><br><br><br><br>
 
+[![DOI](https://zenodo.org/badge/441206629.svg)](https://zenodo.org/doi/10.5281/zenodo.10522970)
+
 ## References
 
 This work uses the [DeepHyperX](https://github.com/nshaud/DeepHyperX) toolbox based on the following paper in Geoscience and Remote Sensing Magazine :
